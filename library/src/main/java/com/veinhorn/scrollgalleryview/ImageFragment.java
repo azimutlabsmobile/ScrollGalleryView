@@ -6,6 +6,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
@@ -90,6 +91,13 @@ public class ImageFragment extends Fragment {
 
     private void loadImageToView() {
         if (mMediaInfo != null) {
+            int imageWidth = mMediaInfo.getHeight();
+            int imageHeight = mMediaInfo.getWidth();
+            ViewGroup.LayoutParams layoutParams = photoView.getLayoutParams();
+            layoutParams.height = imageHeight;
+            layoutParams.width = imageWidth;
+            photoView.setLayoutParams(layoutParams);
+            photoView.requestLayout();
             mMediaInfo.getLoader().loadMedia(getActivity(), photoView, new MediaLoader.SuccessCallback() {
                 @Override
                 public void onSuccess() {}

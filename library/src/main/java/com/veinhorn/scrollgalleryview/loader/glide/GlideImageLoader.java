@@ -25,12 +25,6 @@ public class GlideImageLoader implements MediaLoader {
         this.url = url;
     }
 
-    public GlideImageLoader(String url, int width, int height) {
-        this.url = url;
-        this.width = width;
-        this.height = height;
-    }
-
     @Override
     public boolean isImage() {
         return true;
