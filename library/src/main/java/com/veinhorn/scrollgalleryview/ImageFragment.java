@@ -91,8 +91,8 @@ public class ImageFragment extends Fragment {
 
     private void loadImageToView() {
         if (mMediaInfo != null) {
-            int imageWidth = mMediaInfo.getHeight();
-            int imageHeight = mMediaInfo.getWidth();
+            int imageWidth = mMediaInfo.getWidth();
+            int imageHeight = mMediaInfo.getHeight();
             ViewGroup.LayoutParams layoutParams = photoView.getLayoutParams();
             layoutParams.height = imageHeight;
             layoutParams.width = imageWidth;
