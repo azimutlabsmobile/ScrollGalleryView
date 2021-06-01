@@ -10,7 +10,6 @@
         android:layout_height="match_parent"
         android:layout_centerVertical="true"
         android:adjustViewBounds="true"
-        android:scaleType="center"
         android:src="@drawable/placeholder_image" />
 
 </RelativeLayout>
